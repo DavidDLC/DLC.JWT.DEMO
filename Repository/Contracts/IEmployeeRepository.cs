@@ -20,7 +20,5 @@ namespace JWT.Repository.Contracts
         Task<bool> DeleteEmployee(int id);
 
         bool ExistsEmployee(int id);
-
-
     }
 }

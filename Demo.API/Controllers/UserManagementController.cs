@@ -1,4 +1,6 @@
 ﻿using JWT.Business.Contracts;
+using JWT.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,6 +22,7 @@ namespace JWT.API.Controllers
             _configuration = configuration;
         }
 
+        [Authorize]
         [HttpGet()]
         public ActionResult GetEmployeesTest()
         {
@@ -28,9 +31,9 @@ namespace JWT.API.Controllers
         }
 
         [HttpPost("Login")]
-
-        public ActionResult Login(string user, string password)
+        public ActionResult Login([FromBody] LoginVM userLogin)
         {
+
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
