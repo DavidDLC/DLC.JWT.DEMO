@@ -1,0 +1,1 @@
+﻿scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=JWTAuthentication' Microsoft.EntityFrameworkCore.SqlServer -Tables Employee, UserInfo -Outputdir Models -ContextDir Data
