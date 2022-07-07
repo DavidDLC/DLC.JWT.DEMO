@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JWT.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace JWT.Business.Contracts
 {
     public interface IUserManagementService
     {
-        
-        
+
+        List<Employee> GetEmployees();       
     }
 }

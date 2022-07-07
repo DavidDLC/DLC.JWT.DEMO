@@ -1,4 +1,5 @@
 using JWT.Business.Contracts;
+using JWT.Business.Services;
 using JWT.Models.Data;
 using JWT.Repository.Contracts;
 using JWT.Repository.Repository;
@@ -13,7 +14,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
 // DI for business Service
-builder.Services.AddScoped<IUserManagementService,IUserManagementService>();
+builder.Services.AddScoped<IUserManagementService,UserManagementService>();
 
 //EF SQL configuration
 builder.Services.AddDbContext<JWTAuthenticationContext>(options => options.UseSqlServer(connectionString));
