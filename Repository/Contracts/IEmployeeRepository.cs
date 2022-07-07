@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JWT.Repository.Contract
+namespace JWT.Repository.Contracts
 {
     public interface IEmployeeRepository
     {

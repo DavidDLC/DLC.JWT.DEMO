@@ -1,6 +1,6 @@
 ﻿using JWT.Models.Data;
 using JWT.Models.Models;
-using JWT.Repository.Contract;
+using JWT.Repository.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
